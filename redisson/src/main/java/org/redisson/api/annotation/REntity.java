@@ -28,7 +28,7 @@ import org.redisson.liveobject.resolver.DefaultNamingScheme;
 import org.redisson.liveobject.resolver.NamingScheme;
 
 /**
- * Specifies that the class is a Live Object. 
+ * 指定该类是活动对象。
  *
  * @author Rui Gu (https://github.com/jackygurui)
  */
@@ -44,25 +44,25 @@ public @interface REntity {
     }
     
     /**
-     * (Optional) Live Object naming scheme. Defines how to assign key names for each instance of this class. 
-     * Used to create a reference to an existing Live Object and materialising a new one in redis. 
-     * Defaults to {@link DefaultNamingScheme} implementation.
+     * （可选）活动对象命名方案。定义如何为此类的每个实例分配键名。
+     * 用于创建对现有活动对象的引用并在 redis 中实现一个新对象。
+     * 默认为 {@link DefaultNamingScheme} 实现。
      * 
      * @return value
      */
     Class<? extends NamingScheme> namingScheme() default DefaultNamingScheme.class;
 
     /**
-     * (Optional) Live Object state codec. 
-     * <code>null</code> means to use codec specified in Redisson configuration
+     * （可选）实时对象状态编解码器。
+     * <code>null<code> 表示使用Redisson配置中指定的编解码器
      * 
      * @return value
      */
     Class<? extends Codec> codec() default DEFAULT.class;
 
     /**
-     * (Optional) Live Object field transformation. 
-     * Defaults to {@link TransformationMode#ANNOTATION_BASED}
+     * （可选）实时对象字段转换。
+     * 默认为 {@link TransformationMode#ANNOTATION_BASED}
      * 
      * @return value
      */

@@ -21,8 +21,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Specifies that the method is a field accessor for Live Object.
- * Example:
+ * 指定该方法是 Live Object 的字段访问器。
+ * 示例：
  * <pre>
  *       &#064;RFieldAccessor
  *       public void set(String field, T value) {

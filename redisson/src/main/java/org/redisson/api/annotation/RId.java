@@ -26,8 +26,8 @@ import org.redisson.liveobject.resolver.RequiredIdResolver;
 import org.redisson.liveobject.resolver.UUIDGenerator;
 
 /**
- * Specifies that the field is a Live Object's id field.
- * Only single field could be specified per class. 
+ * 指定该字段是活动对象的 id 字段。
+ * 每个类只能指定一个字段。
  *
  * @author Rui Gu (https://github.com/jackygurui)
  */
@@ -36,7 +36,7 @@ import org.redisson.liveobject.resolver.UUIDGenerator;
 public @interface RId {
     
     /**
-     * (Optional) Live Object id generator. By default id is required to be fill during object creation.
+     * （可选）实时对象 ID 生成器。默认情况下，在对象创建期间需要填写 id。
      * 
      * @see UUIDGenerator
      * @see LongGenerator

@@ -24,7 +24,7 @@ import org.redisson.api.RLiveObjectService;
 import org.redisson.api.condition.Conditions;
 
 /**
- * Specifies that the field is used in search index.
+ * 指定该字段用于搜索索引。
  * 
  * @see Conditions
  * @see RLiveObjectService#find

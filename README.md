@@ -1,27 +1,27 @@
-# Redisson - Redis Java client<br/>with features of an in-memory data grid
+# Redisson - Redis Java客户端<br/>具有内存数据网格的功能
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.redisson/redisson/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.redisson/redisson)
 [![JavaDoc](http://www.javadoc.io/badge/org.redisson/redisson.svg)](http://www.javadoc.io/doc/org.redisson/redisson)
 [![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-[Quick start](https://github.com/redisson/redisson#quick-start) | [Documentation](https://github.com/redisson/redisson/wiki/Table-of-Content) | [Changelog](https://github.com/redisson/redisson/blob/master/CHANGELOG.md) | [Code examples](https://github.com/redisson/redisson-examples) | [FAQs](https://github.com/redisson/redisson/wiki/16.-FAQ) | [Report an issue](https://github.com/redisson/redisson/issues/new)
+[快速开始](https://github.com/redisson/redisson#quick-start) | [文档](https://github.com/redisson/redisson/wiki/Table-of-Content) | [变更日志](https://github.com/redisson/redisson/blob/master/CHANGELOG.md) | [代码示例](https://github.com/redisson/redisson-examples) | [常见问题](https://github.com/redisson/redisson/wiki/16.-FAQ) | [报告问题](https://github.com/redisson/redisson/issues/new)
 
-Based on high-performance async and lock-free Java Redis client and [Netty](http://netty.io) framework.  
-JDK compatibility:  1.8 - 16, Android  
+基于高性能异步无锁Java Redis客户端和 [Netty](http://netty.io) 框架。  
+JDK 兼容性：1.8 - 16，Android
 
-## Features
+## 特点
 
-* Redis Replicated setup (including support of [AWS ElastiCache](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Replication.html) and [Azure Redis Cache](https://azure.microsoft.com/en-us/services/cache/))  
-* Redis Cluster setup (including support of [AWS ElastiCache Cluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.html) and [Azure Redis Cache](https://azure.microsoft.com/en-us/services/cache/))  
-* Redis Sentinel setup  
+* Redis 复制设置 (包括支持 [AWS ElastiCache](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Replication.html) 和 [Azure Redis Cache](https://azure.microsoft.com/en-us/services/cache/))  
+* Redis 集群设置 (包括支持 [AWS ElastiCache Cluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.html) 和 [Azure Redis Cache](https://azure.microsoft.com/en-us/services/cache/))  
+* Redis 哨兵设置  
 * Redis with Master with Slave only  
-* Redis single (including support of [Azure Redis Cache](https://azure.microsoft.com/en-us/services/cache/) and [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/docs/redis/))  
-* Thread-safe implementation  
+* Redis single (包括支持 [Azure Redis Cache](https://azure.microsoft.com/en-us/services/cache/) 和 [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/docs/redis/))  
+* 线程安全的实现  
 * [Reactive Streams](https://github.com/redisson/redisson/wiki/3.-operations-execution#32-reactive-way) API  
 * [RxJava3](https://github.com/redisson/redisson/wiki/3.-operations-execution#32-reactive-way) API  
 * [Asynchronous](https://github.com/redisson/redisson/wiki/3.-operations-execution#31-async-way) API  
-* Asynchronous connection pool  
-* Lua scripting  
-* Local cache support including [Caffeine](https://github.com/ben-manes/caffeine)-based implementation
+* 异步连接池  
+* Lua 脚本  
+* 本地缓存支持包括 [Caffeine](https://github.com/ben-manes/caffeine) -基于实现
 * [Distributed Java objects](https://github.com/redisson/redisson/wiki/6.-Distributed-objects)  
     Object holder, Binary stream holder, Geospatial holder, BitSet, AtomicLong, AtomicDouble, PublishSubscribe,
     Bloom filter, HyperLogLog
@@ -31,27 +31,27 @@ JDK compatibility:  1.8 - 16, Android
     Lock, FairLock, MultiLock, RedLock, ReadWriteLock, Semaphore, PermitExpirableSemaphore, CountDownLatch
 * [Distributed services](https://github.com/redisson/redisson/wiki/9.-distributed-services)  
     Remote service, Live Object service, Executor service, Scheduler service, MapReduce service
-* [Helidon](https://github.com/redisson/redisson/tree/master/redisson-helidon) integration  
-* [Micronaut](https://github.com/redisson/redisson/tree/master/redisson-micronaut) integration  
-* [Quarkus](https://github.com/redisson/redisson/tree/master/redisson-quarkus) integration  
-* [Spring Cache](https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/#142-spring-cache) implementation
-* [Spring Transaction API](https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/#148-spring-transaction-manager) implementation
-* [Spring Data Redis](https://github.com/redisson/redisson/tree/master/redisson-spring-data) integration
-* [Spring Boot Starter](https://github.com/redisson/redisson/tree/master/redisson-spring-boot-starter) implementation
-* [Hibernate Cache](https://github.com/redisson/redisson/tree/master/redisson-hibernate) implementation
-* [MyBatis Cache](https://github.com/redisson/redisson/tree/master/redisson-mybatis) implementation
+* [Helidon](https://github.com/redisson/redisson/tree/master/redisson-helidon) 整合  
+* [Micronaut](https://github.com/redisson/redisson/tree/master/redisson-micronaut) 整合  
+* [Quarkus](https://github.com/redisson/redisson/tree/master/redisson-quarkus) 整合  
+* [Spring Cache](https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/#142-spring-cache) 实现
+* [Spring Transaction API](https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/#148-spring-transaction-manager) 实现
+* [Spring Data Redis](https://github.com/redisson/redisson/tree/master/redisson-spring-data) 整合
+* [Spring Boot Starter](https://github.com/redisson/redisson/tree/master/redisson-spring-boot-starter) 实现
+* [Hibernate Cache](https://github.com/redisson/redisson/tree/master/redisson-hibernate) 实现
+* [MyBatis Cache](https://github.com/redisson/redisson/tree/master/redisson-mybatis) 实现
 * [Transactions API](https://github.com/redisson/redisson/wiki/10.-Additional-features#104-transactions)
-* [JCache API (JSR-107)](https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/#144-jcache-api-jsr-107-implementation) implementation
-* [Tomcat Session Manager](https://github.com/redisson/redisson/tree/master/redisson-tomcat) implementation
-* [Spring Session](https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/#147-spring-session) implementation
+* [JCache API (JSR-107)](https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/#144-jcache-api-jsr-107-implementation) 实现
+* [Tomcat Session Manager](https://github.com/redisson/redisson/tree/master/redisson-tomcat) 实现
+* [Spring Session](https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/#147-spring-session) 实现
 * [Redis pipelining](https://github.com/redisson/redisson/wiki/10.-additional-features#103-execution-batches-of-commands) (command batches)
-* Supports Android platform  
-* Supports auto-reconnection  
-* Supports failed to send command auto-retry  
-* Supports OSGi  
-* Supports SSL  
-* Supports many popular codecs ([JBoss Marshalling](https://github.com/jboss-remoting/jboss-marshalling), [Jackson JSON](https://github.com/FasterXML/jackson), [Avro](http://avro.apache.org/), [Smile](http://wiki.fasterxml.com/SmileFormatSpec), [CBOR](http://cbor.io/), [MsgPack](http://msgpack.org/), [Kryo](https://github.com/EsotericSoftware/kryo), [Amazon Ion](https://amzn.github.io/ion-docs/), [LZ4](https://github.com/jpountz/lz4-java), [Snappy](https://github.com/xerial/snappy-java) and JDK Serialization)
-* With over 2000 unit tests  
+* 支持安卓平台  
+* 支持自动重连  
+* 支持发送命令失败自动重试  
+* 支持 OSGi  
+* 支持 SSL  
+* 支持许多流行的编解码器 ([JBoss Marshalling](https://github.com/jboss-remoting/jboss-marshalling), [Jackson JSON](https://github.com/FasterXML/jackson), [Avro](http://avro.apache.org/), [Smile](http://wiki.fasterxml.com/SmileFormatSpec), [CBOR](http://cbor.io/), [MsgPack](http://msgpack.org/), [Kryo](https://github.com/EsotericSoftware/kryo), [Amazon Ion](https://amzn.github.io/ion-docs/), [LZ4](https://github.com/jpountz/lz4-java), [Snappy](https://github.com/xerial/snappy-java) 和 JDK 序列化)
+* 超过 2000 个单元测试  
 <!--
 Used by
 ================================
@@ -90,15 +90,15 @@ Used by
 
 <sub>Logos, product names and all other trademarks displayed on this page belong to their respective holders and used for identification purposes only. Use of these trademarks, names and brands does not imply endorsement.</sub>
 -->
-## Success stories
+## 成功案例
 
-## [Moving from Hazelcast to Redis  /  Datorama](https://engineering.datorama.com/moving-from-hazelcast-to-redis-b90a0769d1cb)  
-## [Migrating from Hazelcast to Redis  /  Halodoc](https://blogs.halodoc.io/why-and-how-we-move-from-hazelcast-to-redis-2/)
-## [Distributed Locking with Redis (Migration from Hazelcast)  /  ContaAzul](https://carlosbecker.com/posts/distributed-locks-redis/)  
-## [Migrating from Coherence to Redis](https://www.youtube.com/watch?v=JF5R2ucKTEg)  
+## [从 Hazelcast 迁移到 Redis Datorama](https://engineering.datorama.com/moving-from-hazelcast-to-redis-b90a0769d1cb)  
+## [从 Hazelcast 迁移到 Redis Halodoc](https://blogs.halodoc.io/why-and-how-we-move-from-hazelcast-to-redis-2/)
+## [Redis 分布式锁定（从 Hazelcast 迁移） ContaAzul](https://carlosbecker.com/posts/distributed-locks-redis/)  
+## [从 Coherence 迁移到 Redis](https://www.youtube.com/watch?v=JF5R2ucKTEg)  
 
 
-## Quick start
+## 快速开始
 
 #### Maven 
     <dependency>
@@ -116,7 +116,7 @@ Used by
 #### Java
 
 ```java
-// 1. Create config object
+// 1. 创建配置对象
 Config config = new Config();
 config.useClusterServers()
        // use "rediss://" for SSL connection

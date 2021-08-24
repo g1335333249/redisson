@@ -33,7 +33,7 @@ import org.redisson.api.RCascadeType;
 public @interface RCascade {
 
     /**
-     * List of applied cascade types.
+     * 应用级联类型列表。
      * 
      * @return value
      */
