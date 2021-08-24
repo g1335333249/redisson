@@ -119,15 +119,15 @@ Used by
 // 1. 创建配置对象
 Config config = new Config();
 config.useClusterServers()
-       // use "rediss://" for SSL connection
+       // 使用“rediss:”进行 SSL 连接
       .addNodeAddress("redis://127.0.0.1:7181");
 
-// or read config from file
+// 或从文件中读取配置
 config = Config.fromYAML(new File("config-file.yaml")); 
 ```
 
 ```java
-// 2. Create Redisson instance
+// 2. 创建Redisson实例
 
 // Sync and Async API
 RedissonClient redisson = Redisson.create(config);
@@ -140,7 +140,7 @@ RedissonRxClient redissonRx = redisson.rxJava();
 ```
 
 ```java
-// 3. Get Redis based implementation of java.util.concurrent.ConcurrentMap
+// 3. 获取基于 Redis 的 java.util.concurrent.ConcurrentMap 实现
 RMap<MyKey, MyValue> map = redisson.getMap("myMap");
 
 RMapReactive<MyKey, MyValue> mapReactive = redissonReactive.getMap("myMap");
@@ -149,7 +149,7 @@ RMapRx<MyKey, MyValue> mapRx = redissonRx.getMap("myMap");
 ```
 
 ```java
-// 4. Get Redis based implementation of java.util.concurrent.locks.Lock
+// 4. 获取基于 Redis 的 java.util.concurrent.locks.Lock 实现
 RLock lock = redisson.getLock("myLock");
 
 RLockReactive lockReactive = redissonReactive.getLock("myLock");
@@ -158,21 +158,21 @@ RLockRx lockRx = redissonRx.getLock("myLock");
 ```
 
 ```java
-// 4. Get Redis based implementation of java.util.concurrent.ExecutorService
+// 4. 获取基于 Redis 的 java.util.concurrent.ExecutorService 实现
 RExecutorService executor = redisson.getExecutorService("myExecutorService");
 
 // over 50 Redis based Java objects and services ...
 
 ```
 
-Consider __[Redisson PRO](https://redisson.pro)__ version for **ultra-fast performance** and **support by SLA**.
+考虑 __[Redisson PRO](https:redisson.pro)__ 版本以获得超快的性能和 SLA 支持。
 
-## Downloads
+## 下载
    
 [Redisson 3.16.1](https://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=org.redisson&a=redisson&v=3.16.1&e=jar),
 [Redisson node 3.16.1](https://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=org.redisson&a=redisson-all&v=3.16.1&e=jar)  
 
-## FAQs
+## 常见问题
 
 [Q: What is the cause of RedisTimeoutException?](https://github.com/redisson/redisson/wiki/16.-FAQ#q-what-is-the-cause-of-redistimeoutexception)
 
